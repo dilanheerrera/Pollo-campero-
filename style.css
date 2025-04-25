@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,9 +12,13 @@ body{
     height: 100vh;
 }
 
-/* Computadora */
-.barras{ display: none; }
-.desplegable{background: #68331E;}
+/*aca configuro como se veria en computadora*/
+.barras{ 
+    display: none; 
+}
+.desplegable{
+    background: #D6A77A; /* Caramelo suave */
+}
 ul{ 
     display: flex;
     flex-direction: row;
@@ -26,43 +30,41 @@ ul li{
 }
 
 ul li a{
-    color: #FCDE07;
+    color: #FAF0BE; /* Amarillo pastel */
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
 }
 
 nav ul li:hover{
-    background: #ff5722;
+    background: #F4A261; /* Anaranjado suave */
 }
 
-/* Tablet */
+/*aca configuro como se veria en tablet*/
 @media (max-width: 850px){
     .barras{
-        background-color: #68331E;
+        background-color: #D6A77A; /* Caramelo suave */
         display: block;
     }
 
     .desplegable{
         display: none;
-        background: rgba(30, 30, 30, 0.9);
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 50%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding-left: 20px;
-        font-size: 1.5rem;
+        background: none;
+        background-color: #D6A77A; /* Caramelo suave */
+        transform: translate(-100%);
         transition: 0.5s;
-        z-index: 9;
+        font-size: 1.5rem;
+        width: 50%;
     }
 
     ul{
+        display: flex;
         flex-direction: column;
-        width: 100%;
+        height: 100vh;
+    }
+
+    a{
+        padding: 0;
     }
 
     a{
@@ -70,32 +72,41 @@ nav ul li:hover{
         padding: 20px 0px 20px 20px;
         display: block;
         text-align: left;
-        color: #FCDE07;
     }
 
     .boton_menu {
         background-image: url('icono_menu.png');
-        background-color: #1e1e1e;
+        background-color: #D6A77A; /* Caramelo suave */
         background-repeat: no-repeat;
         height: 30px;
         width: 30px;
         background-size: 30px 30px;
-        background-position:center;
+        background-position: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
     }
 
     button{
-        margin: 10px 10px 10px 20px;
+        margin: 5px;
         border: none;
+        margin: 10px 10px 10px 20px;
     }
 
+    /*con esta clase abro y cierro el menu con toggle*/
     .abrir_menu{
-        display: flex;
-        transform: translateX(0%);
+        background: #D6A77A; /* Caramelo suave */
+        backdrop-filter: blur(2px);
+        transform: translate(0%);
+        width: 50%;
+        transition: 0.5s;
     }
 
+    /*con esta clase cambio las barras por una x*/
     .colocar_x {
         background-image: url('icono_x.png');
-        background-color: #68331E;
+        background-color: #D6A77A; /* Caramelo suave */
         background-repeat: no-repeat;
         background-size: 30px 30px;
         background-position: center;
@@ -106,49 +117,52 @@ nav ul li:hover{
     }
 }
 
-/* Celular */
+/*aca configuro como se veria en celular*/
 @media (max-width: 500px){
     .barras{
         display: block;
-        background-color: #68331E;
+        background-color: #D6A77A; /* Caramelo suave */
     }
 
     .boton_menu {
         background-image: url('icono_menu.png');
-        background-color: #1e1e1e;
+        background-color: #D6A77A; /* Caramelo suave */
         background-repeat: no-repeat;
         height: 30px;
         width: 30px;
         background-size: 30px 30px;
-        background-position:center;
+        background-position: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
     }
 
     .desplegable {
         display: none;
-        background: rgba(30, 30, 30, 0.9);
-        position: fixed;
-        top: 0;
-        left: 0;
+        background: #E6A57E; /* Terracota clara */
         width: 100%;
         height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         padding-left: 20px;
         font-size: 1.6rem;
         transition: 0.5s;
-        z-index: 9;
     }
 
     .abrir_menu {
         display: flex;
-        transform: translateX(0%);
+        transform: translate(0%);
     }
 
     ul {
         flex-direction: column;
+        height: 100vh;
         width: 100%;
-        height: 100%;
         padding: 0;
     }
 
@@ -160,18 +174,12 @@ nav ul li:hover{
     ul li a {
         text-align: left;
         font-size: 1.6rem;
-        color: #FCDE07;
+        color: #FAF0BE; /* Amarillo pastel */
     }
 
     .colocar_x {
         background-image: url('icono_x.png');
-        background-color: #68331E;
+        background-color: #D6A77A; /* Caramelo suave */
         background-repeat: no-repeat;
         background-size: 30px 30px;
-        background-position: center;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 10;
-    }
-}
+        background-position:
