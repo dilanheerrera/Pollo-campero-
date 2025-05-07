@@ -193,16 +193,8 @@ nav ul li:hover{
         background-position:
 
   }
-
-.imagen-pollo {
-    width: 510px;
-    height: 300px;
-}
-
-@media (max-width: 500px) {
     .imagen-pollo {
         width: 410px;
         height: 200px;
     }
-}
 
