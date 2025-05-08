@@ -48,10 +48,9 @@ nav ul li:hover{
 @media (max-width: 850px){
     .barras {
         display: block;
-        background-color: #D6A77A; /* Caramelo suave */
-        position: relative; /* Cambiar a relative para que esté debajo de la imagen */
-        margin-top: 20px; /* Espaciado entre la imagen y la barra */
-        text-align: center; /* Centrar la barra */
+        background-color: #D6A77A;
+        position: relative;
+        text-align: left;
     }
 
     .boton_menu {
@@ -64,6 +63,17 @@ nav ul li:hover{
         background-position: center;
         border: none;
     }
+
+    .desplegable{
+        display: none;
+        background: #E6A57E; /* Terracota clara */
+        transform: translate(-100%);
+        transition: 0.5s;
+        font-size: 1.5rem;
+        width: 50%;
+        z-index: 9;
+    }
+
     ul{
         display: flex;
         flex-direction: column;
@@ -120,7 +130,9 @@ nav ul li:hover{
 @media (max-width: 500px){
     .barras {
         display: block;
-        background-color:#D6A77A;
+        background-color: #D6A77A;
+        position: relative;
+        text-align: left; 
     }
 
     .boton_menu {
@@ -177,7 +189,11 @@ nav ul li:hover{
         background-color: #D6A77A; /* Caramelo suave */
         background-repeat: no-repeat;
         background-size: 30px 30px;
-        background-position:
+        background-position: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
 
   }
     .imagen-pollo {
